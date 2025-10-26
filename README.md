@@ -1,48 +1,44 @@
 📰 Advanced Fake News Detection System
 Project Overview 🌟
 
-The rapid spread of misinformation on social media has created an urgent need for automated systems that can reliably detect fake content.
+The rapid spread of misinformation on social media has created an urgent need for automated systems to reliably detect fake content.
 
-This project presents a multimodal ensemble-based approach to classify social media posts as REAL or FAKE.
+This project presents a TF-IDF + Ensemble-based system to classify news articles as REAL or FAKE.
 
-Key features:
+Key Features:
 
-TF-IDF text encoding for capturing contextual information.
+✅ TF-IDF text encoding for contextual understanding.
 
-Ensemble learning using Logistic Regression, Random Forest, XGBoost, LightGBM.
+🔹 Ensemble Learning: Logistic Regression, Random Forest, XGBoost, LightGBM.
 
-Calibrated confidence scores for reliable predictions.
+📊 Calibrated confidence scores for prediction reliability.
 
-Flask deployment with a color-coded frontend for real-time news classification.
+🌐 Flask deployment with a color-coded interactive frontend.
 
 Experiments Covered 🔬
 
-This project primarily implements two experiments:
-
 Experiment 2: Supervised Learning Models
 
-Text classification using TF-IDF.
+TF-IDF vectorization
 
-Ensemble methods: Logistic Regression, Random Forest, XGBoost, LightGBM.
+Ensemble classifiers: Logistic Regression, Random Forest, XGBoost, LightGBM
 
-Calibrated confidence using CalibratedClassifierCV.
+Confidence calibration using CalibratedClassifierCV
 
 Experiment 9: REST API for Model Deployment
 
-Flask web app to serve the trained model.
+Flask web application for real-time predictions
 
-Interactive frontend with color-coded results:
+Interactive color-coded results:
 
-✅ Green → REAL news
+✅ REAL news (green)
 
-🚨 Red → FAKE news
-
-Ready for Docker deployment for portability and scalability.
+🚨 FAKE news (red)
 
 Folder Structure 📂
 FakeNewsProject/
 ├─ app.py                  # Flask application
-├─train_model.py           # Script to train ensemble model
+├─ train_model.py          # Model training script
 ├─ model.pkl               # Trained ensemble model
 ├─ vectorizer.pkl          # TF-IDF vectorizer
 └─ templates/
@@ -77,11 +73,13 @@ Paste a news headline or full article into the textarea.
 
 Click Check Authenticity.
 
-View prediction with confidence:
+View prediction:
 
 ✅ REAL news (green)
 
 🚨 FAKE news (red)
+
+Confidence score is displayed alongside the result.
 
 Sample Real News for Testing ✅
 
@@ -101,13 +99,14 @@ Sample Fake News for Testing 🚨
 
 Future Enhancements 🔧
 
-Integrate Google Gemini / GPT embeddings for semantic understanding.
+Integrate Google Gemini / GPT embeddings for semantic analysis.
 
-Include image and metadata analysis for multimodal detection.
+Add images and metadata for multimodal detection.
 
-Deploy using Docker or cloud services for scalability.
+Containerize using Docker for cloud deployment.
 
-Add SHAP/LIME explainability to highlight influential words.
+Add SHAP/LIME explainability to highlight influential words in predictions.
+
 
 
 References 📚
