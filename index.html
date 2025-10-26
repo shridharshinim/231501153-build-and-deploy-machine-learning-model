@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h2 {
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>📰 Advanced Fake News Detection</h2>
+    <form method="post" action="/predict">
+        <textarea name="news" placeholder="Paste news headline or full article here..."></textarea><br><br>
+        <input type="submit" value="Check Authenticity">
+    </form>
+    <div class="result" style="color: {{ color }};">{{ prediction_text }}</div>
+    <p style="margin-top:20px; font-size:14px; color:#555;">
+        ℹ️ The model uses an advanced stacked ensemble with calibrated confidence scores.
+    </p>
+</body>
+</html>
